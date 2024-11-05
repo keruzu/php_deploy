@@ -1,5 +1,12 @@
 # Example CodeDeploy IaC
 
+Caveats:
+This is NOT for production use.
+* There are hardcoded secrets
+* Configuration should be managed in SSM Parameter Store or other areas
+* No KMS controls (what????)
+* No logging / monitoring of deploy
+
 # Terraform Infrastructure Deployment
 To deploy the infrastructure into an AWS account, assumes the following:
 1. AWS account already created
