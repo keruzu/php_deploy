@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+export APP_SECRET=sekr3t
+
+LOG=/var/log/php.log
+
+# apache2-foreground
+cd /var/www
+sudo php -S 0.0.0.0:80 -t public/ > /var/log/php.log 2>&1 &
+echo "Logs being sent to $LOG"
+

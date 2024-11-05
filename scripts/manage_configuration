@@ -1,0 +1,8 @@
+#!/bin/bash
+
+USER=app_user
+PASSWORD=s3kr3ts3kr3ts3kr3t
+DB_SERVER=db
+
+mysql --host $DB_SERVER -u $USER --password "$PASSWORD" --protocol tcp --execute /var/www/public/db_create.sql
+
