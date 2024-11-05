@@ -1,18 +1,19 @@
 version: 0.0
 os: linux
+file_exists_behavior: OVERWRITE
 files:
-  - source: /app
-    destination: /var/www/public/
+  - source: /
+    destination: /var/www/
 hooks:
   BeforeInstall:
-    - location: scripts/manage_configuration
+    - location: /var/www/scripts/manage_configuration
       timeout: 300
       runas: root
-    - location: scripts/start_server
+    - location: /var/www/scripts/start_server
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: /var/www/scripts/stop_server
       timeout: 300
       runas: root
 
