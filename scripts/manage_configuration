@@ -1,8 +1,8 @@
 #!/bin/bash
 
-USER=app_user
-PASSWORD=s3kr3ts3kr3ts3kr3t
-DB_SERVER=db
+USER=`awk -F=  '/username/ { print $2 }' /var/www/config.txt`
+PASSWORD=`awk -F=  '/password/ { print $2 }' /var/www/config.txt`
+DB_SERVER=`awk -F=  '/hostname/ { print $2 }' /var/www/config.txt`
 
-mysql --host $DB_SERVER -u $USER --password "$PASSWORD" --protocol tcp --execute /var/www/public/db_create.sql
+mysql --host $DB_SERVER -u $USER --password=$PASSWORD --protocol tcp --execute /var/www/public/db_create.sql
 
