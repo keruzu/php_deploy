@@ -6,14 +6,14 @@ files:
     destination: /var/www/
 hooks:
   BeforeInstall:
-    - location: /var/www/scripts/manage_configuration
+    - location: scripts/manage_configuration
       timeout: 300
       runas: root
-    - location: /var/www/scripts/start_server
+    - location: scripts/start_server
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: /var/www/scripts/stop_server
+    - location: scripts/stop_server
       timeout: 300
       runas: root
 
