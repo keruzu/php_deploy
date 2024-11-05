@@ -1,7 +1,7 @@
 <?php
 $servername = "db";
-$username = "registrar-app";
-$password = "s3kr3t";
+$username = "app_user";
+$password = "s3kr3ts3kr3ts3kr3t";
 $dbname = "example_db";
 
 // Create connection
